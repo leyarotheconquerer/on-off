@@ -1,17 +1,17 @@
-shared class Player: ScriptObject
+shared class PlayerMovement: ScriptObject
 {
 	float RestingFriction;
 	float MovingFriction;
 
-	float pitch_;
-	float yaw_;
-	Quaternion modelRotation_;
-	Node@ cameraMountNode_;
-	Node@ modelNode_;
+	private float pitch_;
+	private float yaw_;
+	private Quaternion modelRotation_;
+	private Node@ cameraMountNode_;
+	private Node@ modelNode_;
 
-	Vector3 debugDirection_;
+	private Vector3 debugDirection_;
 
-	Player()
+	PlayerMovement()
 	{
 		pitch_ = 0.0f;
 		yaw_ = 0.0f;
