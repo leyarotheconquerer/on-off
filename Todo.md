@@ -17,7 +17,7 @@ Assets
 
 Tasks
 * [x] Implement camera movement
-* [ ] Implement player movement
+* [x] Implement player movement
 * [x] Implement spawning
 * [ ] Implement power
 * [ ] Implement pickups
