@@ -3,6 +3,8 @@
 *.exe
 *.so
 
+*~
+*autosave.kra
 *.blend[0-9]*
 *.log
 
