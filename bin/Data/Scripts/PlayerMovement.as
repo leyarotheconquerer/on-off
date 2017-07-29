@@ -113,7 +113,7 @@ shared class PlayerMovement: ScriptObject
 
 	void HandlePostRenderUpdate(StringHash type, VariantMap& data)
 	{
-		if (input.keyDown[KEY_P])
+		if (input.keyDown[KEY_P] && node.HasTag("debug"))
 		{
 			DebugRenderer@ debugRenderer = node.scene.GetComponent("DebugRenderer");
 			PhysicsWorld@ world = node.scene.GetComponent("PhysicsWorld");

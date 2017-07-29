@@ -15,6 +15,7 @@ shared class PlayerPower: ScriptObject
 	void Start()
 	{
 		SubscribeToEvent("MouseButtonDown", "HandleMouseButtonDown");
+		SubscribeToEvent(node, "Pickup", "HandlePickup");
 	}
 
 	void DelayedStart()
@@ -57,6 +58,17 @@ shared class PlayerPower: ScriptObject
 	{
 	}
 
+	void HandlePickup(StringHash type, VariantMap& data)
+	{
+		String pickupType = data["Type"].GetString();
+		if (pickupType == "Power")
+		{
+			float power = data["Power"].GetFloat();
+			Power += power;
+			log.Debug("Picked up some power: " + power);
+		}
+	}
+
 	void HandleMouseButtonDown(StringHash type, VariantMap& data)
 	{
 		if (data["Button"] == MOUSEB_LEFT)
@@ -65,16 +77,16 @@ shared class PlayerPower: ScriptObject
 			{
 				IsPowered = !IsPowered;
 
-				VariantMap data;
+				VariantMap sendData;
 				if (IsPowered)
 				{
-					data["Power"] = Power;
-					SendEvent("PowerActivated", data);
+					sendData["Power"] = Power;
+					SendEvent("PowerActivated", sendData);
 				}
 				else
 				{
-					data["Power"] = Power;
-					SendEvent("PowerDeactivated", data);
+					sendData["Power"] = Power;
+					SendEvent("PowerDeactivated", sendData);
 				}
 			}
 		}

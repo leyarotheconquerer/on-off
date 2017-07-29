@@ -1,15 +1,18 @@
 <?xml version="1.0"?>
-<node id="16777276">
+<node id="16777253">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="PlayerRobot" />
 	<attribute name="Tags">
-		<string value="Player" />
+		<string value="pickuper" />
+		<string value="player" />
 	</attribute>
-	<attribute name="Position" value="-1.38723 -0.34891 6.52313" />
+	<attribute name="Position" value="0 1 7" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
-	<attribute name="Variables" />
-	<component type="ScriptInstance" id="16777389">
+	<attribute name="Variables">
+		<variant hash="24147111" type="String" value="PlayerPower" />
+	</attribute>
+	<component type="ScriptInstance" id="16777375">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/PlayerMovement.as" />
 		<attribute name="Class Name" value="PlayerMovement" />
@@ -17,18 +20,18 @@
 		<attribute name="RestingFriction" value="8" />
 		<attribute name="MovingFriction" value="2" />
 	</component>
-	<component type="CollisionShape" id="16777390">
+	<component type="CollisionShape" id="16777376">
 		<attribute name="Shape Type" value="Capsule" />
 		<attribute name="Size" value="1.1 2 1" />
 		<attribute name="Offset Position" value="0 0.3 0" />
 	</component>
-	<component type="RigidBody" id="16777391">
-		<attribute name="Physics Position" value="-1.38723 -0.34891 6.52313" />
+	<component type="RigidBody" id="16777377">
+		<attribute name="Physics Position" value="0 1 7" />
 		<attribute name="Mass" value="1" />
 		<attribute name="Friction" value="2" />
 		<attribute name="Angular Factor" value="0 0 0" />
 	</component>
-	<component type="ScriptInstance" id="16777392">
+	<component type="ScriptInstance" id="16777378">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/PlayerPower.as" />
 		<attribute name="Class Name" value="PlayerPower" />
@@ -38,7 +41,7 @@
 		<attribute name="IsPowered" value="false" />
 		<attribute name="Power" value="0" />
 	</component>
-	<node id="16777277">
+	<node id="16777254">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
@@ -46,12 +49,12 @@
 		<attribute name="Rotation" value="-4.37114e-008 0 1 -0" />
 		<attribute name="Scale" value="0.005 0.005 0.005" />
 		<attribute name="Variables" />
-		<component type="StaticModel" id="16777393">
+		<component type="StaticModel" id="16777379">
 			<attribute name="Model" value="Model;Models/PlayerRobot.mdl" />
 			<attribute name="Material" value="Material;Materials/DefaultMaterial.xml" />
 		</component>
 	</node>
-	<node id="16777278">
+	<node id="16777255">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="CameraMount" />
 		<attribute name="Tags" />
@@ -59,7 +62,7 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<node id="16777279">
+		<node id="16777256">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Camera" />
 			<attribute name="Tags" />

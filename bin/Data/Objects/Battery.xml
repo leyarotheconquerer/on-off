@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<node id="16777263">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Battery" />
+	<attribute name="Tags">
+		<string value="Pickup" />
+	</attribute>
+	<attribute name="Position" value="-0.952209 0.258025 4.30482" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="CollisionShape" id="16777390">
+		<attribute name="Shape Type" value="Capsule" />
+		<attribute name="Size" value="0.5 0.8 1" />
+	</component>
+	<component type="RigidBody" id="16777391">
+		<attribute name="Physics Position" value="-0.952209 0.258025 4.30482" />
+		<attribute name="Use Gravity" value="false" />
+		<attribute name="Is Trigger" value="true" />
+	</component>
+	<component type="ScriptInstance" id="16777392">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Pickup.as" />
+		<attribute name="Class Name" value="Pickup" />
+		<attribute name="Script Data" value="0 0 64 64 0 0 64 64 0 0 128 64 205 204 204 61 80 111 119 101 114 0" />
+		<attribute name="Power" value="3" />
+		<attribute name="RotationRate" value="3" />
+		<attribute name="OscillationRate" value="4" />
+		<attribute name="VerticalRange" value="0.1" />
+		<attribute name="Type" value="Power" />
+	</component>
+	<node id="16777264">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Model" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="0.965926 0.258819 0 0" />
+		<attribute name="Scale" value="0.001 0.001 0.001" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777393">
+			<attribute name="Model" value="Model;Models/Battery.mdl" />
+			<attribute name="Material" value="Material;Materials/DefaultMaterial.xml" />
+		</component>
+	</node>
+</node>

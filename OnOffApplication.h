@@ -21,6 +21,14 @@ namespace OnOff
 		URHO3D_PARAM(P_POWER, Power);              // float
 	}
 
+	URHO3D_EVENT(E_PICKUP, Pickup)
+	{
+		URHO3D_PARAM(P_PICKUPNODE, PickupNode);    // Urho3D::Node
+		URHO3D_PARAM(P_PICKUPERNODE, PickuperNode);// Urho3D::Node
+		URHO3D_PARAM(P_TYPE, Type);                // Urho3D::String
+		URHO3D_PARAM(P_POWER, Power);              // float
+	}
+
 	class OnOffApplication : public Urho3D::Application
 	{
 		URHO3D_OBJECT(OnOffApplication, Urho3D::Application);
