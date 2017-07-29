@@ -11,6 +11,16 @@ namespace Urho3D
 
 namespace OnOff
 {
+	URHO3D_EVENT(E_POWERACTIVATED, PowerActivated)
+	{
+		URHO3D_PARAM(P_POWER, Power);               // float
+	}
+
+	URHO3D_EVENT(E_POWERDEACTIVATED, PowerDeactivated)
+	{
+		URHO3D_PARAM(P_POWER, Power);              // float
+	}
+
 	class OnOffApplication : public Urho3D::Application
 	{
 		URHO3D_OBJECT(OnOffApplication, Urho3D::Application);
