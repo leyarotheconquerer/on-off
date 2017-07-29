@@ -22,7 +22,7 @@ Tasks
 * [x] Implement spawning
 * [x] Implement power
 * [x] Implement pickups
-* [ ] Implement mode switching
+* [x] Implement mode switching
 * [ ] Implement death
 * [ ] Implement level loading
 * [ ] Implement level completion
