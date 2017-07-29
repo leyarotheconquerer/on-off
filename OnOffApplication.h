@@ -3,6 +3,12 @@
 
 #include <Urho3D/Engine/Application.h>
 
+namespace Urho3D
+{
+	class Context;
+	class ScriptFile;
+}
+
 namespace OnOff
 {
 	class OnOffApplication : public Urho3D::Application
@@ -19,6 +25,12 @@ namespace OnOff
 		virtual void Stop();
 
 	private:
+		void HandleScriptReloadStarted(Urho3D::StringHash type, Urho3D::VariantMap& data);
+		void HandleScriptReloadFailed(Urho3D::StringHash type, Urho3D::VariantMap& data);
+		void HandleScriptReloadFinished(Urho3D::StringHash type, Urho3D::VariantMap& data);
+
+		Urho3D::Context* context_;
+		Urho3D::SharedPtr<Urho3D::ScriptFile> script_;
 	};
 }
 
