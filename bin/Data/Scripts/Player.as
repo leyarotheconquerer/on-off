@@ -5,7 +5,9 @@ shared class Player: ScriptObject
 
 	float pitch_;
 	float yaw_;
-	Node@ cameraMount_;
+	Quaternion modelRotation_;
+	Node@ cameraMountNode_;
+	Node@ modelNode_;
 
 	Vector3 debugDirection_;
 
@@ -24,19 +26,22 @@ shared class Player: ScriptObject
 
 	void DelayedStart()
 	{
-		cameraMount_ = node.GetChild("CameraMount", true);
+		cameraMountNode_ = node.GetChild("CameraMount", true);
+		modelNode_ = node.GetChild("Model", true);
+		modelRotation_ = modelNode_.rotation;
 	}
 
 	void Update(float timestep)
 	{
 		const float MOVEMENT_STRENGTH = 20.0f;
+		const float MOVEMENT_MARGIN = 0.1f;
 		const float MOUSE_SENSITIVITY = 0.1f;
 
 		IntVector2 mouseMove = input.mouseMove;
 		yaw_ += MOUSE_SENSITIVITY * mouseMove.x;
 		pitch_ += MOUSE_SENSITIVITY * mouseMove.y;
 		pitch_ = Clamp(pitch_, -15.0f, 15.0f);
-		cameraMount_.rotation = Quaternion(pitch_, yaw_, 0.0f);
+		cameraMountNode_.rotation = Quaternion(pitch_, yaw_, 0.0f);
 
 		Vector3 direction = Vector3::ZERO;
 		if (input.keyDown[KEY_W] || input.keyDown[KEY_UP])
@@ -72,6 +77,14 @@ shared class Player: ScriptObject
 			rigidBody.friction = RestingFriction;
 		}
 
+		if (rigidBody.linearVelocity.lengthSquared > MOVEMENT_MARGIN)
+		{
+			Vector3 lateralVelocity = Vector3(rigidBody.linearVelocity.x, 0, rigidBody.linearVelocity.z);
+			Quaternion lateralRotation;
+			lateralRotation.FromLookRotation(lateralVelocity, Vector3::UP);
+			lateralRotation = lateralRotation * modelRotation_;
+			modelNode_.rotation = modelNode_.rotation.Nlerp(lateralRotation, 0.3, true);
+		}
 	}
 
 	void Save(Serializer& serializer)
@@ -106,9 +119,11 @@ shared class Player: ScriptObject
 			PhysicsWorld@ world = node.scene.GetComponent("PhysicsWorld");
 
 			Vector3 origin = node.position + Vector3::UP;
-			Vector3 target = node.position + debugDirection_ * 2 + Vector3::UP;
+			Vector3 moveTarget = origin + debugDirection_ * 2;
+			Vector3 faceTarget = (modelNode_.rotation * Vector3::FORWARD) * 3 + origin;
 
-			debugRenderer.AddLine(origin, target, Color(1.0, 0, 0));
+			debugRenderer.AddLine(origin, faceTarget, Color(0, 1, 0));
+			debugRenderer.AddLine(origin, moveTarget, Color(1.0, 0, 0));
 			world.DrawDebugGeometry(debugRenderer, true);
 		}
 	}
