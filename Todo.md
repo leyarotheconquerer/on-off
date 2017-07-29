@@ -6,6 +6,7 @@ Assets
 	* [ ] Bridge Models
 	* [ ] Spike Models
 * [ ] Battery Models
+	* [x] Psuedo-Battery Model
 * [ ] Final Battery Models
 * [ ] Level Models
 * [ ] Level Scenes
@@ -20,7 +21,7 @@ Tasks
 * [x] Implement player movement
 * [x] Implement spawning
 * [x] Implement power
-* [ ] Implement pickups
+* [x] Implement pickups
 * [ ] Implement mode switching
 * [ ] Implement death
 * [ ] Implement level loading
