@@ -4,7 +4,7 @@ Camera@ camera_;
 void Start()
 {
 	scene_ = Scene();
-	scene_.LoadXML(cache.GetFile("Scenes/TestScene.xml"));
+	scene_.LoadXML(cache.GetFile("Scenes/Level1.xml"));
 
 	SubscribeToEvent("Update", "DelayedStart");
 }
