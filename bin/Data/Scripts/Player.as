@@ -1,5 +1,8 @@
 shared class Player: ScriptObject
 {
+	float RestingFriction;
+	float MovingFriction;
+
 	float pitch_;
 	float yaw_;
 	Node@ cameraMount_;
@@ -10,6 +13,7 @@ shared class Player: ScriptObject
 	{
 		pitch_ = 0.0f;
 		yaw_ = 0.0f;
+		RestingFriction = MovingFriction = 2.0f;
 	}
 
 	void Start()
@@ -52,6 +56,7 @@ shared class Player: ScriptObject
 			direction += Vector3::RIGHT;
 		}
 
+		RigidBody@ rigidBody = node.GetComponent("RigidBody");
 		if (direction != Vector3::ZERO)
 		{
 			Quaternion dirRotation = Quaternion(0.0f, yaw_, 0.0f);
@@ -59,10 +64,26 @@ shared class Player: ScriptObject
 			debugDirection_ = direction;
 			direction *= MOVEMENT_STRENGTH;
 
-			RigidBody@ rigidBody = node.GetComponent("RigidBody");
+			rigidBody.friction = MovingFriction;
 			rigidBody.ApplyForce(direction);
 		}
+		else
+		{
+			rigidBody.friction = RestingFriction;
+		}
 
+	}
+
+	void Save(Serializer& serializer)
+	{
+		serializer.WriteFloat(MovingFriction);
+		serializer.WriteFloat(RestingFriction);
+	}
+
+	void Load(Deserializer& deserializer)
+	{
+		MovingFriction = deserializer.ReadFloat();
+		RestingFriction = deserializer.ReadFloat();
 	}
 
 	void Stop()
