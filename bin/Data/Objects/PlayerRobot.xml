@@ -17,6 +17,16 @@
 		<attribute name="yaw_" value="0" />
 		<attribute name="cameraMount_" value="0" />
 	</component>
+	<component type="CollisionShape" id="16777291">
+		<attribute name="Shape Type" value="Capsule" />
+		<attribute name="Size" value="1.1 2 1" />
+		<attribute name="Offset Position" value="0 0.3 0" />
+	</component>
+	<component type="RigidBody" id="16777292">
+		<attribute name="Physics Position" value="0 1.7088 4" />
+		<attribute name="Mass" value="1" />
+		<attribute name="Angular Factor" value="0 0 0" />
+	</component>
 	<node id="16777235">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
