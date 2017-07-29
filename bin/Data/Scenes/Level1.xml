@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="1" />
 	<attribute name="Next Replicated Component ID" value="4" />
-	<attribute name="Next Local Node ID" value="16777257" />
-	<attribute name="Next Local Component ID" value="16777303" />
+	<attribute name="Next Local Node ID" value="16777265" />
+	<attribute name="Next Local Component ID" value="16777324" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -22,6 +22,14 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
+		<component type="ScriptInstance" id="16777323">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 76 101 118 101 108 49 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 101 118 101 108 49 77 97 116 101 114 105 97 108 76 105 116 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Level1Material.xml" />
+			<attribute name="ActiveMat" value="Materials/Level1MaterialLit.xml" />
+		</component>
 		<node id="16777218">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
@@ -32,7 +40,7 @@
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777228">
 				<attribute name="Model" value="Model;Models/Level1.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Level1Material.xml" />
 			</component>
 		</node>
 		<node id="16777222">
@@ -594,6 +602,66 @@
 					<attribute name="SpawnName" value="Player" />
 				</component>
 			</node>
+			<node id="16777257">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="BatterySpawner" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="-20 3 35" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="ScriptInstance" id="16777303">
+					<attribute name="Delayed Method Calls" value="0" />
+					<attribute name="Script File" value="ScriptFile;Scripts/Spawn.as" />
+					<attribute name="Class Name" value="Spawn" />
+					<attribute name="Script Data" value="79 98 106 101 99 116 115 47 66 97 116 116 101 114 121 46 120 109 108 0 66 97 116 116 101 114 121 0" />
+					<attribute name="SpawnItem" value="Objects/Battery.xml" />
+					<attribute name="SpawnName" value="Battery" />
+				</component>
+				<node id="16777259">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="0.001 0.001 0.001" />
+					<attribute name="Variables" />
+					<component type="StaticModel" id="16777304">
+						<attribute name="Model" value="Model;Models/Battery.mdl" />
+						<attribute name="Material" value="Material;" />
+					</component>
+				</node>
+			</node>
+			<node id="16777260">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="BatterySpawner" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 7 50" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="ScriptInstance" id="16777305">
+					<attribute name="Delayed Method Calls" value="0" />
+					<attribute name="Script File" value="ScriptFile;Scripts/Spawn.as" />
+					<attribute name="Class Name" value="Spawn" />
+					<attribute name="Script Data" value="79 98 106 101 99 116 115 47 66 97 116 116 101 114 121 46 120 109 108 0 66 97 116 116 101 114 121 0" />
+					<attribute name="SpawnItem" value="Objects/Battery.xml" />
+					<attribute name="SpawnName" value="Battery" />
+				</component>
+				<node id="16777261">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="0.001 0.001 0.001" />
+					<attribute name="Variables" />
+					<component type="StaticModel" id="16777306">
+						<attribute name="Model" value="Model;Models/Battery.mdl" />
+						<attribute name="Material" value="Material;" />
+					</component>
+				</node>
+			</node>
 		</node>
 	</node>
 	<node id="16777219">
@@ -607,7 +675,6 @@
 		<component type="Zone" id="16777229">
 			<attribute name="Bounding Box Min" value="-100 -100 -100" />
 			<attribute name="Bounding Box Max" value="100 100 100" />
-			<attribute name="Ambient Color" value="0.2 0.2 0.2 1" />
 		</component>
 	</node>
 	<node id="16777220">
@@ -628,7 +695,7 @@
 			<attribute name="Variables" />
 			<component type="Light" id="16777230">
 				<attribute name="Light Type" value="Directional" />
-				<attribute name="Color" value="0.5 0.5 0.5 1" />
+				<attribute name="Color" value="0.3 0.3 0.3 1" />
 			</component>
 		</node>
 	</node>
