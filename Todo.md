@@ -16,7 +16,7 @@ Assets
 	* [ ] Level 5
 
 Tasks
-* [ ] Implement camera movement
+* [x] Implement camera movement
 * [ ] Implement player movement
 * [x] Implement spawning
 * [ ] Implement power
