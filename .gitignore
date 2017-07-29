@@ -3,6 +3,7 @@
 *.exe
 *.so
 
+*.blend[0-9]*
 *.log
 
 *.cmake

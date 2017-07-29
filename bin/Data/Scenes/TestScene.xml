@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<scene id="1">
+	<attribute name="Name" value="" />
+	<attribute name="Time Scale" value="1" />
+	<attribute name="Smoothing Constant" value="50" />
+	<attribute name="Snap Threshold" value="5" />
+	<attribute name="Elapsed Time" value="0" />
+	<attribute name="Next Replicated Node ID" value="1" />
+	<attribute name="Next Replicated Component ID" value="3" />
+	<attribute name="Next Local Node ID" value="16777222" />
+	<attribute name="Next Local Component ID" value="16777233" />
+	<attribute name="Variables" />
+	<attribute name="Variable Names" value="" />
+	<component type="Octree" id="1" />
+	<component type="DebugRenderer" id="2" />
+	<node id="16777217">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="TestFloor" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777218">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777229">
+				<attribute name="Model" value="Model;Data/Models/RandomFloor.mdl" />
+				<attribute name="Material" value="Material;Data/Materials/DefaultMaterial.xml" />
+			</component>
+		</node>
+	</node>
+	<node id="16777219">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Zone" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Zone" id="16777230">
+			<attribute name="Bounding Box Min" value="-100 -100 -100" />
+			<attribute name="Bounding Box Max" value="100 100 100" />
+			<attribute name="Ambient Color" value="0.2 0.2 0.2 1" />
+		</component>
+	</node>
+	<node id="16777220">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Light" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="-0.653076 5.19143 -10.5034" />
+		<attribute name="Rotation" value="0.760935 0.318179 -0.521685 0.218139" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="Light" id="16777231">
+			<attribute name="Light Type" value="Directional" />
+			<attribute name="Color" value="0.5 0.5 0.5 1" />
+		</component>
+	</node>
+	<node id="16777221">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Camera" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="9.37793 8.61829 -3.78981" />
+		<attribute name="Rotation" value="0.931093 0.20834 -0.294001 0.0567756" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+	</node>
+</scene>
