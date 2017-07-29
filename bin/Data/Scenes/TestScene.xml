@@ -5,10 +5,10 @@
 	<attribute name="Smoothing Constant" value="50" />
 	<attribute name="Snap Threshold" value="5" />
 	<attribute name="Elapsed Time" value="0" />
-	<attribute name="Next Replicated Node ID" value="1" />
-	<attribute name="Next Replicated Component ID" value="3" />
-	<attribute name="Next Local Node ID" value="16777230" />
-	<attribute name="Next Local Component ID" value="16777241" />
+	<attribute name="Next Replicated Node ID" value="4" />
+	<attribute name="Next Replicated Component ID" value="4" />
+	<attribute name="Next Local Node ID" value="16777233" />
+	<attribute name="Next Local Component ID" value="16777277" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -30,8 +30,8 @@
 			<attribute name="Scale" value="0.01 0.01 0.01" />
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777229">
-				<attribute name="Model" value="Model;Data/Models/RandomFloor.mdl" />
-				<attribute name="Material" value="Material;Data/Materials/DefaultMaterial.xml" />
+				<attribute name="Model" value="Model;Models/RandomFloor.mdl" />
+				<attribute name="Material" value="Material;Materials/DefaultMaterial.xml" />
 			</component>
 		</node>
 	</node>
@@ -66,17 +66,30 @@
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="PlayerSpawn" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="-3.331 -2.10363 3.22818" />
+		<attribute name="Position" value="0 0.55 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
 		<component type="ScriptInstance" id="16777240">
 			<attribute name="Delayed Method Calls" value="0" />
-			<attribute name="Script File" value="ScriptFile;Data/Scripts/Spawn.as" />
+			<attribute name="Script File" value="ScriptFile;Scripts/Spawn.as" />
 			<attribute name="Class Name" value="Spawn" />
 			<attribute name="Script Data" value="79 98 106 101 99 116 115 47 80 108 97 121 101 114 82 111 98 111 116 46 120 109 108 0 80 108 97 121 101 114 0" />
 			<attribute name="SpawnItem" value="Objects/PlayerRobot.xml" />
 			<attribute name="SpawnName" value="Player" />
 		</component>
+		<node id="3">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="TeaPot" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="3">
+				<attribute name="Model" value="Model;Models/TeaPot.mdl" />
+				<attribute name="Material" value="Material;;" />
+			</component>
+		</node>
 	</node>
 </scene>
