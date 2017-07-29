@@ -19,7 +19,7 @@ Tasks
 * [x] Implement camera movement
 * [x] Implement player movement
 * [x] Implement spawning
-* [ ] Implement power
+* [x] Implement power
 * [ ] Implement pickups
 * [ ] Implement mode switching
 * [ ] Implement death
