@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<element type="Window">
+	<attribute name="Name" value="Dialog" />
+	<attribute name="Size" value="300 200" />
+	<attribute name="Min Anchor" value="0.5 0.5" />
+	<attribute name="Max Anchor" value="0.5 0.5" />
+	<attribute name="Pivot" value="0.5 0.5" />
+	<attribute name="Texture" value="Texture2D;Textures/OnOffUI.png" />
+	<attribute name="Image Rect" value="0 0 32 32" />
+	<attribute name="Border" value="8 8 8 8" />
+	<element type="Text">
+		<attribute name="Name" value="Title" />
+		<attribute name="Position" value="0 10" />
+		<attribute name="Min Anchor" value="0.5 0" />
+		<attribute name="Max Anchor" value="0.5 0" />
+		<attribute name="Pivot" value="0.5 0" />
+		<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Font" value="Font;Fonts/Carlito-Regular.ttf" />
+		<attribute name="Font Size" value="24" />
+		<attribute name="Text" value="Well hi there!" />
+	</element>
+	<element type="Window">
+		<attribute name="Name" value="Picture" />
+		<attribute name="Position" value="0 -30" />
+		<attribute name="Size" value="250 120" />
+		<attribute name="Min Anchor" value="0.5 1" />
+		<attribute name="Max Anchor" value="0.5 1" />
+		<attribute name="Pivot" value="0.5 1" />
+		<attribute name="Texture" value="Texture2D;Textures/OnOffUI.png" />
+		<attribute name="Image Rect" value="0 0 128 64" />
+		<attribute name="Border" value="0 0 0 0" />
+	</element>
+	<element type="Text">
+		<attribute name="Position" value="0 -7" />
+		<attribute name="Min Anchor" value="0.5 1" />
+		<attribute name="Max Anchor" value="0.5 1" />
+		<attribute name="Pivot" value="0.5 1" />
+		<attribute name="Top Left Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Top Right Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Bottom Left Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Bottom Right Color" value="0.85 0.85 0.85 1" />
+		<attribute name="Font" value="Font;Fonts/Carlito-Regular.ttf" />
+		<attribute name="Font Size" value="14" />
+		<attribute name="Text" value="Right click to dismiss" />
+	</element>
+</element>
