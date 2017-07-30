@@ -37,7 +37,7 @@ Tasks
 * [ ] Implement death
 * [x] Implement level loading
 * [x] Implement level completion
-* [ ] Implement level restart
+* [x] Implement level restart
 * [ ] Implement obstacles
 	* [ ] Implement doors
 	* [ ] Implement bridges
