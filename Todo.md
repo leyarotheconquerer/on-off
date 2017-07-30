@@ -44,7 +44,7 @@ Tasks
 	* [ ] Implement spikes
 	* [ ] Implement pistons?
 * [ ] Implement GUI
-	* [ ] Implement power meter
+	* [x] Implement power meter
 	* [ ] Implement opening menu
 	* [ ] Implement start level UI
 * [ ] Implement sounds
