@@ -33,6 +33,15 @@ Running
 -------
 Run the generated binary at `bin/onoff`
 
+License and Credit
+------------------
+This project is usable under the MIT license (see [here](./License.md)).
+
+It heavily uses the Urho3D library/engine which is licensed under the MIT license
+and may be found [here](https://github.com/urho3d/Urho3D).
+
+It uses a font under the [OFL (SIL Open Font License)](http://scripts.sil.org/OFL)
+
 Concept Guidance
 ---------------
 - On or Off
