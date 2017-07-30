@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<node id="16777265">
+<node id="16777274">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="PlayerRobot" />
 	<attribute name="Tags">
 		<string value="pickuper" />
 		<string value="player" />
 	</attribute>
-	<attribute name="Position" value="-5.99924 3.25483 17.9195" />
+	<attribute name="Position" value="16.4292 8.68313 78.4318" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables">
 		<variant hash="24147111" type="String" value="PlayerPower" />
 	</attribute>
-	<component type="ScriptInstance" id="16777324">
+	<component type="ScriptInstance" id="16777334">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/PlayerMovement.as" />
 		<attribute name="Class Name" value="PlayerMovement" />
@@ -24,28 +24,32 @@
 		<attribute name="MOVEMENT_MARGIN" value="0.1" />
 		<attribute name="MOUSE_SENSITIVITY" value="0.1" />
 	</component>
-	<component type="CollisionShape" id="16777325">
+	<component type="CollisionShape" id="16777335">
 		<attribute name="Shape Type" value="Capsule" />
 		<attribute name="Size" value="1.1 2 1" />
 		<attribute name="Offset Position" value="0 0.3 0" />
 	</component>
-	<component type="RigidBody" id="16777326">
-		<attribute name="Physics Position" value="-5.99924 3.25483 17.9195" />
+	<component type="RigidBody" id="16777336">
+		<attribute name="Physics Position" value="16.4292 8.68313 78.4318" />
 		<attribute name="Mass" value="1" />
 		<attribute name="Friction" value="2" />
 		<attribute name="Angular Factor" value="0 0 0" />
 	</component>
-	<component type="ScriptInstance" id="16777327">
+	<component type="ScriptInstance" id="16777337">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/PlayerPower.as" />
 		<attribute name="Class Name" value="PlayerPower" />
-		<attribute name="Script Data" value="0 0 128 63 0 0 64 64" />
+		<attribute name="Script Data" value="0 0 128 63 0 0 64 64 85 73 47 80 111 119 101 114 72 85 68 46 120 109 108 0 80 111 119 101 114 80 97 110 101 108 0 80 111 119 101 114 66 97 114 0 80 111 119 101 114 84 101 120 116 0" />
 		<attribute name="DrainRate" value="1" />
 		<attribute name="InitialPower" value="3" />
 		<attribute name="IsPowered" value="false" />
 		<attribute name="Power" value="0" />
+		<attribute name="HUD" value="UI/PowerHUD.xml" />
+		<attribute name="HUDName" value="PowerPanel" />
+		<attribute name="PowerBar" value="PowerBar" />
+		<attribute name="PowerText" value="PowerText" />
 	</component>
-	<node id="16777266">
+	<node id="16777275">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
@@ -53,12 +57,12 @@
 		<attribute name="Rotation" value="-4.37114e-008 0 1 -0" />
 		<attribute name="Scale" value="0.005 0.005 0.005" />
 		<attribute name="Variables" />
-		<component type="StaticModel" id="16777328">
+		<component type="StaticModel" id="16777338">
 			<attribute name="Model" value="Model;Models/PlayerRobot.mdl" />
 			<attribute name="Material" value="Material;Materials/DefaultMaterial.xml" />
 		</component>
 	</node>
-	<node id="16777267">
+	<node id="16777276">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="CameraMount" />
 		<attribute name="Tags" />
@@ -66,7 +70,7 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<node id="16777268">
+		<node id="16777277">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Camera" />
 			<attribute name="Tags" />

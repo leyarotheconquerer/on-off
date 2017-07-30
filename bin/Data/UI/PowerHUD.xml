@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<element type="Window">
+	<attribute name="Name" value="PowerPanel" />
+	<attribute name="Position" value="50 -50" />
+	<attribute name="Size" value="500 100" />
+	<attribute name="Min Anchor" value="0 1" />
+	<attribute name="Max Anchor" value="0 1" />
+	<attribute name="Pivot" value="0 1" />
+	<attribute name="Opacity" value="0.75" />
+	<attribute name="Texture" value="Texture2D;Textures/OnOffUI.png" />
+	<attribute name="Image Rect" value="0 0 32 32" />
+	<attribute name="Border" value="8 8 8 8" />
+	<element type="Window">
+		<attribute name="Name" value="PowerBar" />
+		<attribute name="Size" value="300 100" />
+		<attribute name="Pivot" value="0 0" />
+		<attribute name="Is Enabled" value="false" />
+		<attribute name="Is Editable" value="false" />
+		<attribute name="Texture" value="Texture2D;Textures/OnOffUI.png" />
+		<attribute name="Image Rect" value="96 0 128 32" />
+		<attribute name="Border" value="8 8 8 8" />
+		<attribute name="Blend Mode" value="alpha" />
+	</element>
+	<element type="Text">
+		<attribute name="Name" value="PowerText" />
+		<attribute name="Min Anchor" value="0.5 0.5" />
+		<attribute name="Max Anchor" value="0.5 0.5" />
+		<attribute name="Pivot" value="0.5 0.5" />
+		<attribute name="Color" value="0.8 0.8 0.8 1" />
+		<attribute name="Top Left Color" value="0.8 0.8 0.8 1" />
+		<attribute name="Top Right Color" value="0.8 0.8 0.8 1" />
+		<attribute name="Bottom Left Color" value="0.8 0.8 0.8 1" />
+		<attribute name="Bottom Right Color" value="0.8 0.8 0.8 1" />
+		<attribute name="Font" value="Font;Fonts/Carlito-Regular.ttf" />
+		<attribute name="Font Size" value="24" />
+		<attribute name="Text" value="Power: 2.5 / 3.0" />
+	</element>
+</element>

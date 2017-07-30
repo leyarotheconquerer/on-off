@@ -9,6 +9,8 @@ void Start()
 {
 	StartScene("Scenes/Level1.xml");
 	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
+
+	ui.root.defaultStyle = cache.GetResource("XMLFile", "UI/OnOffStyle.xml");
 }
 
 void Stop()
