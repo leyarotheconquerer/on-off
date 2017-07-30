@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="1" />
 	<attribute name="Next Replicated Component ID" value="4" />
-	<attribute name="Next Local Node ID" value="16777297" />
-	<attribute name="Next Local Component ID" value="16777373" />
+	<attribute name="Next Local Node ID" value="16777304" />
+	<attribute name="Next Local Component ID" value="16777380" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -964,6 +964,104 @@
 					<attribute name="Rotation" value="1 0 0 0" />
 					<attribute name="Scale" value="1 1 1" />
 					<attribute name="Variables" />
+				</node>
+			</node>
+			<node id="16777297">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="Spikes" />
+				<attribute name="Tags" />
+				<attribute name="Position" value="0 2 15" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="ScriptInstance" id="16777379">
+					<attribute name="Delayed Method Calls" value="0" />
+					<attribute name="Script File" value="ScriptFile;Scripts/Spikes.as" />
+					<attribute name="Class Name" value="Spikes" />
+					<attribute name="Script Data" value="205 204 140 63 0 0 128 63 205 204 204 61" />
+					<attribute name="RetractDepth" value="1.1" />
+					<attribute name="RetractRate" value="1" />
+					<attribute name="SpikeRate" value="0.1" />
+				</component>
+				<node id="16777298">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Base" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16777299">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Model" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 0" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="0.005 0.005 0.005" />
+						<attribute name="Variables" />
+						<component type="StaticModel" id="16777373">
+							<attribute name="Model" value="Model;Models/SpikesBase.mdl" />
+							<attribute name="Material" value="Material;" />
+						</component>
+					</node>
+				</node>
+				<node id="16777300">
+					<attribute name="Is Enabled" value="true" />
+					<attribute name="Name" value="Spikes" />
+					<attribute name="Tags" />
+					<attribute name="Position" value="0 0 0" />
+					<attribute name="Rotation" value="1 0 0 0" />
+					<attribute name="Scale" value="1 1 1" />
+					<attribute name="Variables" />
+					<node id="16777301">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Model" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 0" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="0.005 0.005 0.005" />
+						<attribute name="Variables" />
+						<component type="StaticModel" id="16777374">
+							<attribute name="Model" value="Model;Models/SpikesSpikes.mdl" />
+							<attribute name="Material" value="Material;" />
+						</component>
+					</node>
+					<node id="16777302">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Detection" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 0" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+						<component type="CollisionShape" id="16777375">
+							<attribute name="Size" value="1.9 1 1.9" />
+							<attribute name="Offset Position" value="0 0.5 0" />
+						</component>
+						<component type="RigidBody" id="16777376">
+							<attribute name="Physics Position" value="0 2 15" />
+							<attribute name="Use Gravity" value="false" />
+							<attribute name="Is Trigger" value="true" />
+						</component>
+					</node>
+					<node id="16777303">
+						<attribute name="Is Enabled" value="true" />
+						<attribute name="Name" value="Collision" />
+						<attribute name="Tags" />
+						<attribute name="Position" value="0 0 0" />
+						<attribute name="Rotation" value="1 0 0 0" />
+						<attribute name="Scale" value="1 1 1" />
+						<attribute name="Variables" />
+						<component type="CollisionShape" id="16777377">
+							<attribute name="Size" value="2 1 2" />
+							<attribute name="Offset Position" value="0 0.4 0" />
+						</component>
+						<component type="RigidBody" id="16777378">
+							<attribute name="Physics Position" value="0 2 15" />
+							<attribute name="Use Gravity" value="false" />
+							<attribute name="Is Kinematic" value="true" />
+						</component>
+					</node>
 				</node>
 			</node>
 		</node>
