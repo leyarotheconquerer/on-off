@@ -1,6 +1,7 @@
 class LevelExit: ScriptObject
 {
 	String NextLevel;
+	String NextLevelTitle;
 
 	private bool isActive_;
 	private bool isComplete_;
@@ -26,11 +27,13 @@ class LevelExit: ScriptObject
 	void Save(Serializer& serializer)
 	{
 		serializer.WriteString(NextLevel);
+		serializer.WriteString(NextLevelTitle);
 	}
 
 	void Load(Deserializer& deserializer)
 	{
 		NextLevel = deserializer.ReadString();
+		NextLevelTitle = deserializer.ReadString();
 	}
 
 	void Stop()
@@ -47,6 +50,7 @@ class LevelExit: ScriptObject
 				{
 					VariantMap sendData;
 					sendData["NextLevel"] = NextLevel;
+					sendData["NextLevelTitle"] = NextLevelTitle;
 					sendData["DisplayMessage"] = true;
 					SendEvent("LevelComplete", sendData);
 					isComplete_ = true;

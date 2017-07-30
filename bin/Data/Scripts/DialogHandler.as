@@ -38,6 +38,7 @@ class DialogHandler: ScriptObject
 			if (messageElement !is null)
 			{
 				messageElement.text = message;
+				messageElement.width = 300;
 			}
 		}
 

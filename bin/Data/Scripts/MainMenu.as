@@ -49,6 +49,7 @@ class MainMenu: ScriptObject
 	{
 		VariantMap sendData;
 		sendData["NextLevel"] = NextLevel;
+		sendData["NextLevelTitle"] = "On/Off";
 		sendData["DisplayMessage"] = false;
 		SendEvent("LevelComplete", sendData);
 	}

@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="1" />
 	<attribute name="Next Replicated Component ID" value="5" />
-	<attribute name="Next Local Node ID" value="16777306" />
-	<attribute name="Next Local Component ID" value="16777395" />
+	<attribute name="Next Local Node ID" value="16777307" />
+	<attribute name="Next Local Component ID" value="16777407" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -705,8 +705,9 @@
 					<attribute name="Delayed Method Calls" value="0" />
 					<attribute name="Script File" value="ScriptFile;Scripts/LevelExit.as" />
 					<attribute name="Class Name" value="LevelExit" />
-					<attribute name="Script Data" value="83 99 101 110 101 115 47 84 101 115 116 83 99 101 110 101 46 120 109 108 0" />
+					<attribute name="Script Data" value="83 99 101 110 101 115 47 84 101 115 116 83 99 101 110 101 46 120 109 108 0 84 101 115 116 32 76 101 118 101 108 0" />
 					<attribute name="NextLevel" value="Scenes/TestScene.xml" />
+					<attribute name="NextLevelTitle" value="Test Level" />
 				</component>
 				<node id="16777272">
 					<attribute name="Is Enabled" value="true" />
@@ -742,9 +743,9 @@
 					<attribute name="Delayed Method Calls" value="0" />
 					<attribute name="Script File" value="ScriptFile;Scripts/DialogRegion.as" />
 					<attribute name="Class Name" value="DialogRegion" />
-					<attribute name="Script Data" value="112 108 97 121 101 114 0 85 73 47 68 105 97 108 111 103 84 101 115 116 46 120 109 108 0 73 110 116 114 111 32 77 101 115 115 97 103 101 0 87 101 108 99 111 109 101 32 116 111 32 116 104 101 32 103 97 109 101 46 32 84 104 105 115 32 105 115 32 97 32 116 101 115 116 32 109 101 115 115 97 103 101 0 84 101 120 116 117 114 101 115 47 79 110 79 102 102 85 73 46 112 110 103 0 0 0 0 0 0 0 0 0 32 0 0 0 32 0 0 0" />
+					<attribute name="Script Data" value="112 108 97 121 101 114 0 85 73 47 68 105 97 108 111 103 46 120 109 108 0 73 110 116 114 111 32 77 101 115 115 97 103 101 0 87 101 108 99 111 109 101 32 116 111 32 116 104 101 32 103 97 109 101 46 32 84 104 105 115 32 105 115 32 97 32 116 101 115 116 32 109 101 115 115 97 103 101 0 84 101 120 116 117 114 101 115 47 79 110 79 102 102 85 73 46 112 110 103 0 0 0 0 0 0 0 0 0 32 0 0 0 32 0 0 0" />
 					<attribute name="Tag" value="player" />
-					<attribute name="DialogElement" value="UI/DialogTest.xml" />
+					<attribute name="DialogElement" value="UI/Dialog.xml" />
 					<attribute name="Title" value="Intro Message" />
 					<attribute name="Message" value="Welcome to the game. This is a test message" />
 					<attribute name="Image" value="Textures/OnOffUI.png" />

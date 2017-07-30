@@ -1,6 +1,8 @@
 #include "Scripts/PlayerPower.as"
 
 String currentLevel_;
+String currentMessage_;
+String currentTitle_;
 Scene@ newScene_;
 Scene@ scene_;
 Camera@ camera_;
@@ -9,6 +11,7 @@ Timer timer_;
 void Start()
 {
 	StartScene("Scenes/StartUp.xml");
+	currentTitle_ = currentMessage_ = "";
 	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
 	SubscribeToEvent("LevelRestart", "HandleLevelRestart");
 
@@ -21,9 +24,12 @@ void Stop()
 
 void HandleLevelComplete(StringHash type, VariantMap& data)
 {
-	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
+	currentTitle_ = "";
+	currentMessage_ = "";
 	if (data["DisplayMessage"].GetBool())
 	{
+		currentTitle_ = "Welcome to " + data["NextLevelTitle"].GetString();
+		currentMessage_ = "Last Level Stats:\n";
 		CollectLevelStats();
 	}
 	StartScene(data["NextLevel"].GetString());
@@ -31,10 +37,19 @@ void HandleLevelComplete(StringHash type, VariantMap& data)
 
 void HandleLevelRestart(StringHash type, VariantMap& data)
 {
-	log.Info("Type: " + data["Type"].GetString());
+	currentTitle_ = "";
+	currentMessage_ = "";
 	if (data["DisplayMessage"].GetBool())
 	{
-		log.Info("Message: " + data["Message"].GetString());
+		if (data["Type"].GetString() == "Death")
+		{
+			currentTitle_ = "You Died";
+		}
+		else if (data["Type"].GetString() == "PlayerRestart")
+		{
+			currentTitle_ = "Restarting the Level";
+		}
+		currentMessage_ = data["Message"].GetString() + "\nLast Attempt Stats:\n";
 		CollectLevelStats();
 	}
 	StartScene(currentLevel_);
@@ -43,12 +58,16 @@ void HandleLevelRestart(StringHash type, VariantMap& data)
 void CollectLevelStats()
 {
 	float timeTaken = timer_.GetMSec(false);
-	log.Debug("You took " + timeTaken / 1000.f + " seconds to solve the level");
 
 	Node@[] playerNode = scene_.GetChildrenWithTag("player", true);
 	PlayerPower@ playerPower = cast<PlayerPower>(playerNode[0].GetScriptObject("PlayerPower"));
 	float power = playerPower.Power;
-	log.Debug("You had " + power + " power remaining");
+	float maxPower = playerPower.MaxPower;
+
+	currentMessage_ = currentMessage_ +
+		"Time Taken: " + timeTaken / 1000.f + " seconds\n" +
+		"Power Remaining: " + power + "\n" +
+		"Power Collected: " + maxPower;
 }
 
 void StartScene(String scene)
@@ -82,6 +101,19 @@ void HandleDelayedStart(StringHash type, VariantMap& data)
 	scene_ = newScene_;
 	camera_ = newCamera;
 	newScene_ = null;
+
+	if (currentTitle_ != "")
+	{
+		log.Debug("Sending message: " + currentMessage_);
+		VariantMap sendData;
+		sendData["Dialog"] = "UI/Dialog.xml";
+		sendData["Title"] = currentTitle_;
+		sendData["Message"] = currentMessage_;
+		sendData["Image"] = "";
+		IntRect imageRect = IntRect(0, 0, 0, 0);
+		sendData["ImageRect"] = imageRect;
+		SendEvent("ShowDialog", sendData);
+	}
 
 	timer_.Reset();
 }

@@ -127,6 +127,7 @@ shared class PlayerMovement: ScriptObject
 		{
 			VariantMap sendData;
 			sendData["NextLevel"] = "Scenes/StartUp.xml";
+			sendData["NextLevelTitle"] = "Main Menu";
 			sendData["DisplayMessage"] = false;
 			SendEvent("LevelComplete", sendData);
 		}

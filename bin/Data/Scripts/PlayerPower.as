@@ -4,6 +4,7 @@ shared class PlayerPower: ScriptObject
 	float InitialPower;
 	bool IsPowered;
 	float Power;
+	float MaxPower;
 	String HUD;
 	String HUDName;
 	String PowerBar;
@@ -12,7 +13,6 @@ shared class PlayerPower: ScriptObject
 	private UIElement@ hud_;
 	private UIElement@ powerBar_;
 	private Text@ powerText_;
-	private float maxPower_;
 	private int powerBarWidth_;
 
 	PlayerPower()
@@ -39,7 +39,7 @@ shared class PlayerPower: ScriptObject
 	void DelayedStart()
 	{
 		Power = InitialPower;
-		maxPower_ = Power;
+		MaxPower = Power;
 
 		hud_ = ui.root.GetChild(HUDName);
 		powerBar_ = hud_.GetChild(PowerBar);
@@ -69,9 +69,9 @@ shared class PlayerPower: ScriptObject
 
 	void Update(float timestep)
 	{
-		float percentPower = Power / maxPower_;
+		float percentPower = Power / MaxPower;
 		powerBar_.width = percentPower * powerBarWidth_;
-		powerText_.text = "Power: " + Ceil(Power) + " / " + Ceil(maxPower_);
+		powerText_.text = "Power: " + Ceil(Power) + " / " + Ceil(MaxPower);
 		if (IsPowered)
 		{
 			if (Power < timestep * DrainRate)
@@ -101,7 +101,7 @@ shared class PlayerPower: ScriptObject
 		{
 			float power = data["Power"].GetFloat();
 			Power += power;
-			maxPower_ += power;
+			MaxPower += power;
 			log.Debug("Picked up some power: " + power);
 		}
 	}
