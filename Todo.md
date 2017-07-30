@@ -1,15 +1,11 @@
 Assets
 * [ ] Player Model
 	 * [x] Psuedo-Player Model
-* [ ] Obstacle Models
-	* [ ] Door Models
-		* [x] Psuedo-Door Model
-	* [ ] Bridge Models
-		* [x] Psuedo-Bridge Model
-	* [ ] Spike Models
-		* [x] Psuedo-Spike Model
-* [ ] Battery Models
-	* [x] Psuedo-Battery Model
+* [x] Obstacle Models
+	* [x] Door Models
+	* [x] Bridge Models
+	* [x] Spike Models
+* [x] Battery Models
 * [ ] Final Battery Models?
 * [ ] Level Models
 	* [ ] Modular parts
