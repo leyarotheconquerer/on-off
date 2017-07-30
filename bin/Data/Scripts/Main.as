@@ -1,6 +1,7 @@
 Scene@ newScene_;
 Scene@ scene_;
 Camera@ camera_;
+Timer timer_;
 
 void Start()
 {
@@ -15,6 +16,9 @@ void Stop()
 void HandleLevelComplete(StringHash type, VariantMap& data)
 {
 	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
+	float timeTaken = timer_.GetMSec(false);
+	log.Debug("You took " + timeTaken / 1000.f + " seconds to solve the level");
+
 	StartScene(data["NextLevel"].GetString());
 }
 
@@ -48,4 +52,6 @@ void HandleDelayedStart(StringHash type, VariantMap& data)
 	scene_ = newScene_;
 	camera_ = newCamera;
 	newScene_ = null;
+
+	timer_.Reset();
 }
