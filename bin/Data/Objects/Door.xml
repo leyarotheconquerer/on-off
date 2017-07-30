@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<node id="16777278">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Door" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="-9 3 19" />
+	<attribute name="Rotation" value="0.707107 0 0.707107 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="ScriptInstance" id="16777358">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/Door.as" />
+		<attribute name="Class Name" value="Door" />
+		<attribute name="Script Data" value="0 0 160 64 0 0 128 63" />
+		<attribute name="VerticalDraw" value="5" />
+		<attribute name="DrawRate" value="1" />
+	</component>
+	<node id="16777280">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Frame" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777279">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777350">
+				<attribute name="Model" value="Model;Models/DoorFrame.mdl" />
+				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
+		<node id="16777284">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Collision" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="CollisionShape" id="16777354">
+				<attribute name="Size" value="1 10 2" />
+				<attribute name="Offset Position" value="-2.5 4 0" />
+			</component>
+			<component type="RigidBody" id="16777355">
+				<attribute name="Physics Rotation" value="0.707107 0 0.707107 0" />
+				<attribute name="Physics Position" value="-9 3 19" />
+			</component>
+		</node>
+		<node id="16777285">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Collision" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="CollisionShape" id="16777356">
+				<attribute name="Size" value="1 10 2" />
+				<attribute name="Offset Position" value="2.5 4 0" />
+			</component>
+			<component type="RigidBody" id="16777357">
+				<attribute name="Physics Rotation" value="0.707107 0 0.707107 0" />
+				<attribute name="Physics Position" value="-9 3 19" />
+			</component>
+		</node>
+	</node>
+	<node id="16777281">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Door" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<component type="CollisionShape" id="16777359">
+			<attribute name="Size" value="4 6 0.5" />
+			<attribute name="Offset Position" value="0 2 0" />
+		</component>
+		<component type="RigidBody" id="16777360">
+			<attribute name="Physics Rotation" value="0.707107 0 0.707107 0" />
+			<attribute name="Physics Position" value="-9 3 19" />
+			<attribute name="Mass" value="100" />
+			<attribute name="Linear Factor" value="0 1 0" />
+			<attribute name="Angular Factor" value="0 0 0" />
+		</component>
+		<node id="16777282">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Model" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="0.01 0.01 0.01" />
+			<attribute name="Variables" />
+			<component type="StaticModel" id="16777351">
+				<attribute name="Model" value="Model;Models/DoorDoor.mdl" />
+				<attribute name="Material" value="Material;" />
+			</component>
+		</node>
+	</node>
+</node>
