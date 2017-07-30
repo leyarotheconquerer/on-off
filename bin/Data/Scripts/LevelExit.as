@@ -47,6 +47,7 @@ class LevelExit: ScriptObject
 				{
 					VariantMap sendData;
 					sendData["NextLevel"] = NextLevel;
+					sendData["DisplayMessage"] = true;
 					SendEvent("LevelComplete", sendData);
 					isComplete_ = true;
 				}

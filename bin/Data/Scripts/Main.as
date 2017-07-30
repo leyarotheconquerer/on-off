@@ -8,7 +8,7 @@ Timer timer_;
 
 void Start()
 {
-	StartScene("Scenes/Level1.xml");
+	StartScene("Scenes/StartUp.xml");
 	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
 	SubscribeToEvent("LevelRestart", "HandleLevelRestart");
 
@@ -22,15 +22,21 @@ void Stop()
 void HandleLevelComplete(StringHash type, VariantMap& data)
 {
 	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
-	CollectLevelStats();
+	if (data["DisplayMessage"].GetBool())
+	{
+		CollectLevelStats();
+	}
 	StartScene(data["NextLevel"].GetString());
 }
 
 void HandleLevelRestart(StringHash type, VariantMap& data)
 {
 	log.Info("Type: " + data["Type"].GetString());
-	log.Info("Message: " + data["Message"].GetString());
-	CollectLevelStats();
+	if (data["DisplayMessage"].GetBool())
+	{
+		log.Info("Message: " + data["Message"].GetString());
+		CollectLevelStats();
+	}
 	StartScene(currentLevel_);
 }
 

@@ -92,6 +92,7 @@ class Spikes: ScriptObject
 		{
 			VariantMap sendData;
 			sendData["Type"] = "Spikes";
+			sendData["DisplayMessage"] = true;
 			sendData["Message"] = DeathMessage;
 			SendEvent("PlayerDeath", sendData);
 		}

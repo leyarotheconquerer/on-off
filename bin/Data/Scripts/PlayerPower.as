@@ -133,6 +133,7 @@ shared class PlayerPower: ScriptObject
 	{
 		VariantMap sendData;
 		sendData["Type"] = "Death";
+		sendData["DisplayMessage"] = true;
 		sendData["Message"] = data["Message"].GetString();
 		SendEvent("LevelRestart", sendData);
 	}

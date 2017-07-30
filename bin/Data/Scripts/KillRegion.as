@@ -37,6 +37,7 @@ class KillRegion: ScriptObject
 		{
 			VariantMap sendData;
 			sendData["Type"] = Type;
+			sendData["DisplayMessage"] = true;
 			sendData["Message"] = Message;
 			SendEvent("PlayerDeath", sendData);
 		}

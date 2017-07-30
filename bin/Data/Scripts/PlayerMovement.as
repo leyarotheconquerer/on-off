@@ -125,13 +125,17 @@ shared class PlayerMovement: ScriptObject
 	{
 		if (data["Key"] == KEY_ESCAPE)
 		{
-			engine.Exit();
+			VariantMap sendData;
+			sendData["NextLevel"] = "Scenes/StartUp.xml";
+			sendData["DisplayMessage"] = false;
+			SendEvent("LevelComplete", sendData);
 		}
 
 		if (data["Key"] == KEY_SPACE)
 		{
 			VariantMap sendData;
 			sendData["Type"] = "PlayerRestart";
+			sendData["DisplayMessage"] = true;
 			sendData["Message"] = "You restarted the level";
 			SendEvent("LevelRestart", sendData);
 		}
