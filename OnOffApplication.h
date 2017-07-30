@@ -11,6 +11,11 @@ namespace Urho3D
 
 namespace OnOff
 {
+	URHO3D_EVENT(E_LEVELCOMPLETE, LevelComplete)
+	{
+		URHO3D_PARAM(P_NEXTLEVEL, NextLevel);       // Urho3D::String
+	}
+
 	URHO3D_EVENT(E_POWERACTIVATED, PowerActivated)
 	{
 		URHO3D_PARAM(P_POWER, Power);               // float

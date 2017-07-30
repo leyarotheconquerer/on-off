@@ -1,25 +1,51 @@
+Scene@ newScene_;
 Scene@ scene_;
 Camera@ camera_;
 
 void Start()
 {
-	scene_ = Scene();
-	scene_.LoadXML(cache.GetFile("Scenes/Level1.xml"));
-
-	SubscribeToEvent("Update", "DelayedStart");
-}
-
-void DelayedStart(StringHash type, VariantMap& data)
-{
-	UnsubscribeFromEvent("Update");
-
-	Node@ cameraNode = scene_.GetChild("Camera", true);
-	camera_ = cameraNode.CreateComponent("Camera");
-
-	Viewport@ viewport = Viewport(scene_, cameraNode.GetComponent("Camera"));
-	renderer.viewports[0] = viewport;
+	StartScene("Scenes/Level1.xml");
+	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
 }
 
 void Stop()
 {
+}
+
+void HandleLevelComplete(StringHash type, VariantMap& data)
+{
+	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
+	StartScene(data["NextLevel"].GetString());
+}
+
+void StartScene(String scene)
+{
+	newScene_ = Scene();
+	newScene_.LoadAsyncXML(cache.GetFile(scene));
+
+	SubscribeToEvent("AsyncLoadFinished", "HandleAsyncLoadFinished");
+}
+
+void HandleAsyncLoadFinished(StringHash type, VariantMap& data)
+{
+	UnsubscribeFromEvent("AsyncLoadFinished");
+
+	newScene_ = data["Scene"].GetPtr();
+
+	SubscribeToEvent("Update", "HandleDelayedStart");
+}
+
+void HandleDelayedStart(StringHash type, VariantMap& data)
+{
+	UnsubscribeFromEvent("Update");
+
+	Node@ cameraNode = newScene_.GetChild("Camera", true);
+	Camera@ newCamera = cameraNode.CreateComponent("Camera");
+
+	Viewport@ viewport = Viewport(newScene_, cameraNode.GetComponent("Camera"));
+	renderer.viewports[0] = viewport;
+
+	scene_ = newScene_;
+	camera_ = newCamera;
+	newScene_ = null;
 }
