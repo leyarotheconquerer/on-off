@@ -127,6 +127,12 @@ shared class PlayerMovement: ScriptObject
 		{
 			engine.Exit();
 		}
+
+		if (data["Key"] == KEY_SPACE)
+		{
+			VariantMap sendData;
+			SendEvent("LevelRestart", sendData);
+		}
 	}
 
 	void HandlePostRenderUpdate(StringHash type, VariantMap& data)

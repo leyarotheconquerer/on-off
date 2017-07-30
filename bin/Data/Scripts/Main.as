@@ -1,5 +1,6 @@
 #include "Scripts/PlayerPower.as"
 
+String currentLevel_;
 Scene@ newScene_;
 Scene@ scene_;
 Camera@ camera_;
@@ -9,6 +10,7 @@ void Start()
 {
 	StartScene("Scenes/Level1.xml");
 	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
+	SubscribeToEvent("LevelRestart", "HandleLevelRestart");
 
 	ui.root.defaultStyle = cache.GetResource("XMLFile", "UI/OnOffStyle.xml");
 }
@@ -20,6 +22,18 @@ void Stop()
 void HandleLevelComplete(StringHash type, VariantMap& data)
 {
 	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
+	CollectLevelStats();
+	StartScene(data["NextLevel"].GetString());
+}
+
+void HandleLevelRestart()
+{
+	CollectLevelStats();
+	StartScene(currentLevel_);
+}
+
+void CollectLevelStats()
+{
 	float timeTaken = timer_.GetMSec(false);
 	log.Debug("You took " + timeTaken / 1000.f + " seconds to solve the level");
 
@@ -27,12 +41,11 @@ void HandleLevelComplete(StringHash type, VariantMap& data)
 	PlayerPower@ playerPower = cast<PlayerPower>(playerNode[0].GetScriptObject("PlayerPower"));
 	float power = playerPower.Power;
 	log.Debug("You had " + power + " power remaining");
-
-	StartScene(data["NextLevel"].GetString());
 }
 
 void StartScene(String scene)
 {
+	currentLevel_ = scene;
 	newScene_ = Scene();
 	newScene_.LoadAsyncXML(cache.GetFile(scene));
 
