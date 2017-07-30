@@ -5,7 +5,9 @@ Assets
 	* [ ] Door Models
 		* [x] Psuedo-Door Model
 	* [ ] Bridge Models
+		* [x] Psuedo-Bridge Model
 	* [ ] Spike Models
+		* [x] Psuedo-Spike Model
 * [ ] Battery Models
 	* [x] Psuedo-Battery Model
 * [ ] Final Battery Models?
@@ -44,10 +46,10 @@ Tasks
 	* [x] Implement bridges
 	* [x] Implement spikes
 	* [ ] Implement pistons?
-* [ ] Implement GUI
+* [x] Implement GUI
 	* [x] Implement power meter
 	* [x] Implement opening menu
-	* [ ] Implement start level UI
+	* [x] Implement start level UI
 * [ ] Implement sounds
 * [ ] Implement music
 * [ ] Implement initial menu
