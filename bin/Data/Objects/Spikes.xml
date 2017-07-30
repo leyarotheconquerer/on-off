@@ -11,10 +11,11 @@
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Spikes.as" />
 		<attribute name="Class Name" value="Spikes" />
-		<attribute name="Script Data" value="205 204 140 63 0 0 128 63 205 204 204 61" />
-		<attribute name="RetractDepth" value="1.1" />
+		<attribute name="Script Data" value="0 0 192 63 0 0 128 63 205 204 204 61 79 117 99 104 33 32 84 104 97 116 32 119 97 115 32 115 112 105 107 101 121 0" />
+		<attribute name="RetractDepth" value="1.5" />
 		<attribute name="RetractRate" value="1" />
 		<attribute name="SpikeRate" value="0.1" />
+		<attribute name="DeathMessage" value="Ouch! That was spikey" />
 	</component>
 	<node id="16777298">
 		<attribute name="Is Enabled" value="true" />

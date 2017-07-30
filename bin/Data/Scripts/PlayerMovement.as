@@ -131,6 +131,8 @@ shared class PlayerMovement: ScriptObject
 		if (data["Key"] == KEY_SPACE)
 		{
 			VariantMap sendData;
+			sendData["Type"] = "PlayerRestart";
+			sendData["Message"] = "You restarted the level";
 			SendEvent("LevelRestart", sendData);
 		}
 	}

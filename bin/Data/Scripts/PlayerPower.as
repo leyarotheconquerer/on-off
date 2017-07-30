@@ -32,6 +32,7 @@ shared class PlayerPower: ScriptObject
 		ui.root.LoadChildXML(cache.GetResource("XMLFile", HUD));
 
 		SubscribeToEvent("MouseButtonDown", "HandleMouseButtonDown");
+		SubscribeToEvent("PlayerDeath", "HandlePlayerDeath");
 		SubscribeToEvent(node, "Pickup", "HandlePickup");
 	}
 
@@ -126,5 +127,13 @@ shared class PlayerPower: ScriptObject
 				}
 			}
 		}
+	}
+
+	void HandlePlayerDeath(StringHash type, VariantMap& data)
+	{
+		VariantMap sendData;
+		sendData["Type"] = "Death";
+		sendData["Message"] = data["Message"].GetString();
+		SendEvent("LevelRestart", sendData);
 	}
 }

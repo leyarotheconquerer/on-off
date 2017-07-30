@@ -26,8 +26,10 @@ void HandleLevelComplete(StringHash type, VariantMap& data)
 	StartScene(data["NextLevel"].GetString());
 }
 
-void HandleLevelRestart()
+void HandleLevelRestart(StringHash type, VariantMap& data)
 {
+	log.Info("Type: " + data["Type"].GetString());
+	log.Info("Message: " + data["Message"].GetString());
 	CollectLevelStats();
 	StartScene(currentLevel_);
 }
