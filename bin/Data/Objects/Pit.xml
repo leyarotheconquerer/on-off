@@ -3,7 +3,7 @@
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Pit" />
 	<attribute name="Tags" />
-	<attribute name="Position" value="0 0 0" />
+	<attribute name="Position" value="0 0 10" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
@@ -11,7 +11,7 @@
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Model" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="10 0 10" />
+		<attribute name="Position" value="10 -40 10" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.01 0.01 0.01" />
 		<attribute name="Variables" />
@@ -38,9 +38,10 @@
 			<attribute name="Variables" />
 			<component type="CollisionShape" id="16777257">
 				<attribute name="Size" value="10 20 10" />
-				<attribute name="Offset Position" value="0 10 0" />
+				<attribute name="Offset Position" value="0 -30 0" />
 			</component>
 			<component type="RigidBody" id="16777260">
+				<attribute name="Physics Position" value="0 0 10" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Trigger" value="true" />
 			</component>
@@ -73,9 +74,10 @@
 			<attribute name="Variables" />
 			<component type="CollisionShape" id="16777258">
 				<attribute name="Size" value="10 1 10" />
-				<attribute name="Offset Position" value="0 -0.5 0" />
+				<attribute name="Offset Position" value="0 -40.5 0" />
 			</component>
 			<component type="RigidBody" id="16777261">
+				<attribute name="Physics Position" value="0 0 10" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
@@ -90,9 +92,10 @@
 			<attribute name="Variables" />
 			<component type="CollisionShape" id="16777259">
 				<attribute name="Size" value="1 40 10" />
-				<attribute name="Offset Position" value="5.5 20 0" />
+				<attribute name="Offset Position" value="5.5 -20 0" />
 			</component>
 			<component type="RigidBody" id="16777262">
+				<attribute name="Physics Position" value="0 0 10" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
