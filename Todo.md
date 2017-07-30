@@ -41,7 +41,7 @@ Tasks
 * [x] Implement level restart
 * [ ] Implement obstacles
 	* [x] Implement doors
-	* [ ] Implement bridges
+	* [x] Implement bridges
 	* [ ] Implement spikes
 	* [ ] Implement pistons?
 * [ ] Implement GUI
