@@ -1,6 +1,5 @@
 Assets
-* [ ] Player Model
-	 * [x] Psuedo-Player Model
+* [x] Player Model
 * [x] Obstacle Models
 	* [x] Door Models
 	* [x] Bridge Models
