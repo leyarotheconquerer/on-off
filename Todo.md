@@ -3,11 +3,12 @@ Assets
 	 * [x] Psuedo-Player Model
 * [ ] Obstacle Models
 	* [ ] Door Models
+		* [x] Psuedo-Door Model
 	* [ ] Bridge Models
 	* [ ] Spike Models
 * [ ] Battery Models
 	* [x] Psuedo-Battery Model
-* [ ] Final Battery Models
+* [ ] Final Battery Models?
 * [ ] Level Models
 	* [ ] Modular parts
 * [ ] Level Scenes
@@ -39,7 +40,7 @@ Tasks
 * [x] Implement level completion
 * [x] Implement level restart
 * [ ] Implement obstacles
-	* [ ] Implement doors
+	* [x] Implement doors
 	* [ ] Implement bridges
 	* [ ] Implement spikes
 	* [ ] Implement pistons?
