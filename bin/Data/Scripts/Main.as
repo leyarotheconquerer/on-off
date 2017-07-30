@@ -1,3 +1,5 @@
+#include "Scripts/PlayerPower.as"
+
 Scene@ newScene_;
 Scene@ scene_;
 Camera@ camera_;
@@ -18,6 +20,11 @@ void HandleLevelComplete(StringHash type, VariantMap& data)
 	log.Debug("Level Complete. I should be loading "+data["NextLevel"].GetString());
 	float timeTaken = timer_.GetMSec(false);
 	log.Debug("You took " + timeTaken / 1000.f + " seconds to solve the level");
+
+	Node@[] playerNode = scene_.GetChildrenWithTag("player", true);
+	PlayerPower@ playerPower = cast<PlayerPower>(playerNode[0].GetScriptObject("PlayerPower"));
+	float power = playerPower.Power;
+	log.Debug("You had " + power + " power remaining");
 
 	StartScene(data["NextLevel"].GetString());
 }
