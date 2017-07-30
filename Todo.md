@@ -35,14 +35,14 @@ Tasks
 * [x] Implement power
 * [x] Implement pickups
 * [x] Implement mode switching
-* [ ] Implement death
+* [x] Implement death
 * [x] Implement level loading
 * [x] Implement level completion
 * [x] Implement level restart
-* [ ] Implement obstacles
+* [x] Implement obstacles
 	* [x] Implement doors
 	* [x] Implement bridges
-	* [ ] Implement spikes
+	* [x] Implement spikes
 	* [ ] Implement pistons?
 * [ ] Implement GUI
 	* [x] Implement power meter
