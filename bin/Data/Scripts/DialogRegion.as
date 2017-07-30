@@ -1,9 +1,11 @@
 class DialogRegion: ScriptObject
 {
-	String DialogUI;
 	String Tag;
-
-	private UIElement@ dialog_;
+	String DialogElement;
+	String Title;
+	String Message;
+	String Image;
+	IntRect ImageRect;
 
 	DialogRegion()
 	{
@@ -20,27 +22,26 @@ class DialogRegion: ScriptObject
 
 	void Save(Serializer& serializer)
 	{
-		serializer.WriteString(DialogUI);
 		serializer.WriteString(Tag);
+		serializer.WriteString(DialogElement);
+		serializer.WriteString(Title);
+		serializer.WriteString(Message);
+		serializer.WriteString(Image);
+		serializer.WriteIntRect(ImageRect);
 	}
 
 	void Load(Deserializer& deserializer)
 	{
-		DialogUI = deserializer.ReadString();
 		Tag = deserializer.ReadString();
+		DialogElement = deserializer.ReadString();
+		Title = deserializer.ReadString();
+		Message = deserializer.ReadString();
+		Image = deserializer.ReadString();
+		ImageRect = deserializer.ReadIntRect();
 	}
 
 	void Stop()
 	{
-	}
-
-	void HandleMouseButtonDown(StringHash type, VariantMap& data)
-	{
-		if (data["Button"] == MOUSEB_RIGHT)
-		{
-			ui.root.RemoveChild(dialog_);
-			node.Remove();
-		}
 	}
 
 	void HandleNodeCollisionStart(StringHash type, VariantMap& data)
@@ -49,8 +50,14 @@ class DialogRegion: ScriptObject
 		if (other.HasTag(Tag))
 		{
 			UnsubscribeFromEvent(node, "NodeCollisionStart");
-			dialog_ = ui.root.LoadChildXML(cache.GetResource("XMLFile", DialogUI));
-			SubscribeToEvent("MouseButtonDown", "HandleMouseButtonDown");
+			VariantMap sendData;
+			sendData["Dialog"] = DialogElement;
+			sendData["Title"] = Title;
+			sendData["Message"] = Message;
+			sendData["Image"] = Image;
+			sendData["ImageRect"] = ImageRect;
+			SendEvent("ShowDialog", sendData);
+			node.Remove();
 		}
 	}
 }

@@ -49,6 +49,15 @@ namespace OnOff
 		URHO3D_PARAM(P_POWER, Power);                  // float
 	}
 
+	URHO3D_EVENT(E_SHOWDIALOG, ShowDialog)
+	{
+		URHO3D_PARAM(P_DIALOG, Dialog);                // Urho3D::String
+		URHO3D_PARAM(P_TITLE, Title);                  // Urho3D::String
+		URHO3D_PARAM(P_MESSAGE, Message);              // Urho3D::String
+		URHO3D_PARAM(P_IMAGE, Image);                  // Urho3D::String
+		URHO3D_PARAM(P_IMAGERECT, ImageRect);          // Urho3D::IntRect
+	}
+
 	class OnOffApplication : public Urho3D::Application
 	{
 		URHO3D_OBJECT(OnOffApplication, Urho3D::Application);
