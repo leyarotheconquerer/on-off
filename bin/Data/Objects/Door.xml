@@ -23,6 +23,14 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
+		<component type="ScriptInstance" id="16777457">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 85 110 108 105 116 47 68 111 111 114 70 114 97 109 101 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 105 116 47 68 111 111 114 70 114 97 109 101 76 105 116 77 97 116 101 114 105 97 108 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Unlit/DoorFrameMaterial.xml" />
+			<attribute name="ActiveMat" value="Materials/Lit/DoorFrameLitMaterial.xml" />
+		</component>
 		<node id="16777279">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
@@ -33,7 +41,7 @@
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777350">
 				<attribute name="Model" value="Model;Models/DoorFrame.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Unlit/DoorFrameMaterial.xml" />
 			</component>
 		</node>
 		<node id="16777284">
@@ -90,6 +98,14 @@
 			<attribute name="Linear Factor" value="0 1 0" />
 			<attribute name="Angular Factor" value="0 0 0" />
 		</component>
+		<component type="ScriptInstance" id="16777456">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 85 110 108 105 116 47 68 111 111 114 68 111 111 114 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 105 116 47 68 111 111 114 68 111 111 114 76 105 116 77 97 116 101 114 105 97 108 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Unlit/DoorDoorMaterial.xml" />
+			<attribute name="ActiveMat" value="Materials/Lit/DoorDoorLitMaterial.xml" />
+		</component>
 		<node id="16777282">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
@@ -100,7 +116,7 @@
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777351">
 				<attribute name="Model" value="Model;Models/DoorDoor.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Unlit/DoorDoorMaterial.xml" />
 			</component>
 		</node>
 	</node>

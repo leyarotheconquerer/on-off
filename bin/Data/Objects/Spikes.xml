@@ -25,6 +25,14 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
+		<component type="ScriptInstance" id="16777458">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 85 110 108 105 116 47 83 112 105 107 101 115 66 97 115 101 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 105 116 47 83 112 105 107 101 115 66 97 115 101 76 105 116 77 97 116 101 114 105 97 108 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Unlit/SpikesBaseMaterial.xml" />
+			<attribute name="ActiveMat" value="Materials/Lit/SpikesBaseLitMaterial.xml" />
+		</component>
 		<node id="16777299">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
@@ -35,7 +43,7 @@
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777373">
 				<attribute name="Model" value="Model;Models/SpikesBase.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Unlit/SpikesBaseMaterial.xml" />
 			</component>
 		</node>
 	</node>
@@ -57,7 +65,7 @@
 			<attribute name="Variables" />
 			<component type="StaticModel" id="16777374">
 				<attribute name="Model" value="Model;Models/SpikesSpikes.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/SpikesSpikesMaterial.xml" />
 			</component>
 		</node>
 		<node id="16777302">

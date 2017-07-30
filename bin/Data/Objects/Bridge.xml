@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<node id="16777286">
+<node id="16777308">
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="Bridge" />
 	<attribute name="Tags" />
-	<attribute name="Position" value="0 2 0" />
+	<attribute name="Position" value="0 2.05 0" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
-	<component type="ScriptInstance" id="16777372">
+	<component type="ScriptInstance" id="16777419">
 		<attribute name="Delayed Method Calls" value="0" />
 		<attribute name="Script File" value="ScriptFile;Scripts/Bridge.as" />
 		<attribute name="Class Name" value="Bridge" />
@@ -15,7 +15,7 @@
 		<attribute name="Span" value="Objects/BridgeSpan.xml" />
 		<attribute name="SpanScale" value="10" />
 	</component>
-	<node id="16777287">
+	<node id="16777309">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Base" />
 		<attribute name="Tags" />
@@ -23,7 +23,15 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<node id="16777289">
+		<component type="ScriptInstance" id="16777439">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 85 110 108 105 116 47 66 114 105 100 103 101 66 97 115 101 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 105 116 47 66 114 105 100 103 101 66 97 115 101 76 105 116 77 97 116 101 114 105 97 108 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Unlit/BridgeBaseMaterial.xml" />
+			<attribute name="ActiveMat" value="Materials/Lit/BridgeBaseLitMaterial.xml" />
+		</component>
+		<node id="16777310">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
@@ -31,12 +39,12 @@
 			<attribute name="Rotation" value="0.707107 0 -0.707107 0" />
 			<attribute name="Scale" value="0.005 0.005 0.005" />
 			<attribute name="Variables" />
-			<component type="StaticModel" id="16777361">
+			<component type="StaticModel" id="16777421">
 				<attribute name="Model" value="Model;Models/BridgeBase.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Unlit/BridgeBaseMaterial.xml" />
 			</component>
 		</node>
-		<node id="16777294">
+		<node id="16777311">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Collision" />
 			<attribute name="Tags" />
@@ -44,19 +52,19 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="CollisionShape" id="16777366">
+			<component type="CollisionShape" id="16777422">
 				<attribute name="Size" value="2.6 0.4 2" />
 				<attribute name="Offset Position" value="0 -0.25 -0.9" />
 				<attribute name="Offset Rotation" value="0.996195 -0.0871557 0 0" />
 			</component>
-			<component type="RigidBody" id="16777367">
-				<attribute name="Physics Position" value="0 2 0" />
+			<component type="RigidBody" id="16777423">
+				<attribute name="Physics Position" value="0 2.05 0" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
 		</node>
 	</node>
-	<node id="16777288">
+	<node id="16777312">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Base" />
 		<attribute name="Tags" />
@@ -64,7 +72,15 @@
 		<attribute name="Rotation" value="-4.37114e-008 0 1 -0" />
 		<attribute name="Scale" value="1 1 1" />
 		<attribute name="Variables" />
-		<node id="16777290">
+		<component type="ScriptInstance" id="16777440">
+			<attribute name="Delayed Method Calls" value="0" />
+			<attribute name="Script File" value="ScriptFile;Scripts/LightableMat.as" />
+			<attribute name="Class Name" value="LightableMat" />
+			<attribute name="Script Data" value="77 97 116 101 114 105 97 108 115 47 85 110 108 105 116 47 66 114 105 100 103 101 66 97 115 101 77 97 116 101 114 105 97 108 46 120 109 108 0 77 97 116 101 114 105 97 108 115 47 76 105 116 47 66 114 105 100 103 101 66 97 115 101 76 105 116 77 97 116 101 114 105 97 108 46 120 109 108 0" />
+			<attribute name="InactiveMat" value="Materials/Unlit/BridgeBaseMaterial.xml" />
+			<attribute name="ActiveMat" value="Materials/Lit/BridgeBaseLitMaterial.xml" />
+		</component>
+		<node id="16777313">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Model" />
 			<attribute name="Tags" />
@@ -72,12 +88,12 @@
 			<attribute name="Rotation" value="0.707107 0 -0.707107 0" />
 			<attribute name="Scale" value="0.005 0.005 0.005" />
 			<attribute name="Variables" />
-			<component type="StaticModel" id="16777362">
+			<component type="StaticModel" id="16777424">
 				<attribute name="Model" value="Model;Models/BridgeBase.mdl" />
-				<attribute name="Material" value="Material;" />
+				<attribute name="Material" value="Material;Materials/Unlit/BridgeBaseMaterial.xml" />
 			</component>
 		</node>
-		<node id="16777296">
+		<node id="16777314">
 			<attribute name="Is Enabled" value="true" />
 			<attribute name="Name" value="Collision" />
 			<attribute name="Tags" />
@@ -85,20 +101,20 @@
 			<attribute name="Rotation" value="1 0 0 0" />
 			<attribute name="Scale" value="1 1 1" />
 			<attribute name="Variables" />
-			<component type="CollisionShape" id="16777370">
+			<component type="CollisionShape" id="16777425">
 				<attribute name="Size" value="2.6 0.4 2" />
 				<attribute name="Offset Position" value="0 -0.25 -0.9" />
 				<attribute name="Offset Rotation" value="0.996195 -0.0871557 0 0" />
 			</component>
-			<component type="RigidBody" id="16777371">
+			<component type="RigidBody" id="16777426">
 				<attribute name="Physics Rotation" value="-4.37114e-008 0 1 0" />
-				<attribute name="Physics Position" value="0 2 10" />
+				<attribute name="Physics Position" value="0 2.05 10" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
 		</node>
 	</node>
-	<node id="16777291">
+	<node id="16777315">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="BridgeSpan" />
 		<attribute name="Tags" />
