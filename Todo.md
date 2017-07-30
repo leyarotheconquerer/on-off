@@ -24,8 +24,8 @@ Tasks
 * [x] Implement pickups
 * [x] Implement mode switching
 * [ ] Implement death
-* [ ] Implement level loading
-* [ ] Implement level completion
+* [x] Implement level loading
+* [x] Implement level completion
 * [ ] Implement GUI
 * [ ] Implement sounds
 * [ ] Implement music
