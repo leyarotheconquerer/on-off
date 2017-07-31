@@ -41,19 +41,3 @@ It heavily uses the Urho3D library/engine which is licensed under the MIT licens
 and may be found [here](https://github.com/urho3d/Urho3D).
 
 It uses a font under the [OFL (SIL Open Font License)](http://scripts.sil.org/OFL)
-
-Concept Guidance
----------------
-- On or Off
-	* The world can be turned on or off
-	* You have the power switch
-	* But the world can only stay on for so long
-	* There is limited power
-	* Complete each section of each level to get batteries for the world
-	* Finish the levels before the world runs out of power
-	* Obstacles stop you from getting batteries
-	* Obstacles include:
-		+ Doors
-		+ Bridges
-		+ Spikes
-		+ Pistons from above?
