@@ -7,8 +7,8 @@
 	<attribute name="Elapsed Time" value="0" />
 	<attribute name="Next Replicated Node ID" value="1" />
 	<attribute name="Next Replicated Component ID" value="6" />
-	<attribute name="Next Local Node ID" value="16777501" />
-	<attribute name="Next Local Component ID" value="16777647" />
+	<attribute name="Next Local Node ID" value="16777504" />
+	<attribute name="Next Local Component ID" value="16777672" />
 	<attribute name="Variables" />
 	<attribute name="Variable Names" value="" />
 	<component type="Octree" id="1" />
@@ -3875,6 +3875,25 @@
 					<attribute name="SpawnName" value="Player" />
 				</component>
 			</node>
+			<node id="16777503">
+				<attribute name="Is Enabled" value="true" />
+				<attribute name="Name" value="BatterySpawn" />
+				<attribute name="Tags">
+					<string value="debug" />
+				</attribute>
+				<attribute name="Position" value="20.7749 1 -22.114" />
+				<attribute name="Rotation" value="1 0 0 0" />
+				<attribute name="Scale" value="1 1 1" />
+				<attribute name="Variables" />
+				<component type="ScriptInstance" id="16777671">
+					<attribute name="Delayed Method Calls" value="0" />
+					<attribute name="Script File" value="ScriptFile;Scripts/Spawn.as" />
+					<attribute name="Class Name" value="Spawn" />
+					<attribute name="Script Data" value="79 98 106 101 99 116 115 47 66 97 116 116 101 114 121 46 120 109 108 0 66 97 116 116 101 114 121 0" />
+					<attribute name="SpawnItem" value="Objects/Battery.xml" />
+					<attribute name="SpawnName" value="Battery" />
+				</component>
+			</node>
 		</node>
 		<node id="16777489">
 			<attribute name="Is Enabled" value="true" />
@@ -3913,9 +3932,9 @@
 					<attribute name="Delayed Method Calls" value="0" />
 					<attribute name="Script File" value="ScriptFile;Scripts/LevelExit.as" />
 					<attribute name="Class Name" value="LevelExit" />
-					<attribute name="Script Data" value="83 99 101 110 101 115 47 84 101 115 116 83 99 101 110 101 46 120 109 108 0 84 101 115 116 32 76 101 118 101 108 0" />
-					<attribute name="NextLevel" value="Scenes/TestScene.xml" />
-					<attribute name="NextLevelTitle" value="Test Level" />
+					<attribute name="Script Data" value="83 99 101 110 101 115 47 76 101 118 101 108 50 46 120 109 108 0 76 101 118 101 108 32 50 0" />
+					<attribute name="NextLevel" value="Scenes/Level2.xml" />
+					<attribute name="NextLevelTitle" value="Level 2" />
 				</component>
 				<node id="16777492">
 					<attribute name="Is Enabled" value="true" />
