@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<node id="16777276">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Dialog" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="-12 4 20" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="CollisionShape" id="16777346">
+		<attribute name="Size" value="4 4 4" />
+	</component>
+	<component type="RigidBody" id="16777347">
+		<attribute name="Physics Position" value="-12 4 20" />
+		<attribute name="Use Gravity" value="false" />
+		<attribute name="Is Trigger" value="true" />
+	</component>
+	<component type="ScriptInstance" id="16777348">
+		<attribute name="Delayed Method Calls" value="0" />
+		<attribute name="Script File" value="ScriptFile;Scripts/DialogRegion.as" />
+		<attribute name="Class Name" value="DialogRegion" />
+		<attribute name="Script Data" value="112 108 97 121 101 114 0 85 73 47 68 105 97 108 111 103 46 120 109 108 0 73 110 116 114 111 32 77 101 115 115 97 103 101 0 87 101 108 99 111 109 101 32 116 111 32 116 104 101 32 103 97 109 101 46 32 84 104 105 115 32 105 115 32 97 32 116 101 115 116 32 109 101 115 115 97 103 101 0 84 101 120 116 117 114 101 115 47 79 110 79 102 102 85 73 46 112 110 103 0 0 0 0 0 0 0 0 0 32 0 0 0 32 0 0 0" />
+		<attribute name="Tag" value="player" />
+		<attribute name="DialogElement" value="UI/Dialog.xml" />
+		<attribute name="Title" value="Intro Message" />
+		<attribute name="Message" value="Welcome to the game. This is a test message" />
+		<attribute name="Image" value="Textures/OnOffUI.png" />
+		<attribute name="ImageRect" value="0 0 32 32" />
+	</component>
+</node>

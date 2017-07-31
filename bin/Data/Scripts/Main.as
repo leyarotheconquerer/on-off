@@ -10,8 +10,8 @@ Timer timer_;
 
 void Start()
 {
-	StartScene("Scenes/StartUp.xml");
 	currentTitle_ = currentMessage_ = "";
+	StartScene("Scenes/StartUp.xml");
 	SubscribeToEvent("LevelComplete", "HandleLevelComplete");
 	SubscribeToEvent("LevelRestart", "HandleLevelRestart");
 
