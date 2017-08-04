@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<node id="16777237">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="PitWall" />
+	<attribute name="Tags" />
+	<attribute name="Position" value="0 0 20" />
+	<attribute name="Rotation" value="1 0 0 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<node id="16777238">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Model" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="10 -40 10" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="0.01 0.01 0.01" />
+		<attribute name="Variables" />
+		<component type="StaticModel" id="16777256">
+			<attribute name="Model" value="Model;Models/Pit.mdl" />
+			<attribute name="Material" value="Material;" />
+		</component>
+	</node>
+	<node id="16777240">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Detection" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777241">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="Kill" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="CollisionShape" id="16777257">
+				<attribute name="Size" value="10 20 10" />
+				<attribute name="Offset Position" value="0 -30 0" />
+			</component>
+			<component type="RigidBody" id="16777260">
+				<attribute name="Physics Position" value="0 0 20" />
+				<attribute name="Use Gravity" value="false" />
+				<attribute name="Is Trigger" value="true" />
+			</component>
+			<component type="ScriptInstance" id="16777263">
+				<attribute name="Delayed Method Calls" value="0" />
+				<attribute name="Script File" value="ScriptFile;Scripts/KillRegion.as" />
+				<attribute name="Class Name" value="KillRegion" />
+				<attribute name="Script Data" value="70 97 108 108 0 65 97 97 104 33 32 84 104 97 116 32 119 97 115 32 97 32 108 111 110 103 32 100 114 111 112 46 0 112 108 97 121 101 114 0" />
+				<attribute name="Type" value="Fall" />
+				<attribute name="Message" value="Aaah! That was a long drop." />
+				<attribute name="Tag" value="player" />
+			</component>
+		</node>
+	</node>
+	<node id="16777239">
+		<attribute name="Is Enabled" value="true" />
+		<attribute name="Name" value="Collision" />
+		<attribute name="Tags" />
+		<attribute name="Position" value="0 0 0" />
+		<attribute name="Rotation" value="1 0 0 0" />
+		<attribute name="Scale" value="1 1 1" />
+		<attribute name="Variables" />
+		<node id="16777242">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="CollisionShape" id="16777258">
+				<attribute name="Size" value="10 1 10" />
+				<attribute name="Offset Position" value="0 -40.5 0" />
+			</component>
+			<component type="RigidBody" id="16777261">
+				<attribute name="Physics Position" value="0 0 20" />
+				<attribute name="Use Gravity" value="false" />
+				<attribute name="Is Kinematic" value="true" />
+			</component>
+		</node>
+		<node id="16777243">
+			<attribute name="Is Enabled" value="true" />
+			<attribute name="Name" value="" />
+			<attribute name="Tags" />
+			<attribute name="Position" value="0 0 0" />
+			<attribute name="Rotation" value="1 0 0 0" />
+			<attribute name="Scale" value="1 1 1" />
+			<attribute name="Variables" />
+			<component type="CollisionShape" id="16777259">
+				<attribute name="Size" value="1 40 10" />
+				<attribute name="Offset Position" value="5.5 -20 0" />
+			</component>
+			<component type="RigidBody" id="16777262">
+				<attribute name="Physics Position" value="0 0 20" />
+				<attribute name="Use Gravity" value="false" />
+				<attribute name="Is Kinematic" value="true" />
+			</component>
+		</node>
+	</node>
+</node>

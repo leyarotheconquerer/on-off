@@ -3,7 +3,7 @@
 	<attribute name="Is Enabled" value="true" />
 	<attribute name="Name" value="FloorWall" />
 	<attribute name="Tags" />
-	<attribute name="Position" value="0 0 0" />
+	<attribute name="Position" value="10 0 20" />
 	<attribute name="Rotation" value="1 0 0 0" />
 	<attribute name="Scale" value="1 1 1" />
 	<attribute name="Variables" />
@@ -49,6 +49,7 @@
 				<attribute name="Offset Position" value="0 -0.5 0" />
 			</component>
 			<component type="RigidBody" id="16777252">
+				<attribute name="Physics Position" value="10 0 20" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
@@ -66,6 +67,7 @@
 				<attribute name="Offset Position" value="5.5 20 0" />
 			</component>
 			<component type="RigidBody" id="16777253">
+				<attribute name="Physics Position" value="10 0 20" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
@@ -83,6 +85,7 @@
 				<attribute name="Offset Position" value="4.3 2.5 0" />
 			</component>
 			<component type="RigidBody" id="16777254">
+				<attribute name="Physics Position" value="10 0 20" />
 				<attribute name="Use Gravity" value="false" />
 				<attribute name="Is Kinematic" value="true" />
 			</component>
